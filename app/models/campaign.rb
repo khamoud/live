@@ -5,18 +5,42 @@ class Campaign < ActiveRecord::Base
 
 
 def init
-  self.email_share_percent 			||= 0.1
-  self.fb_share_percent 			||= 0.1
-  self.fb_like_percent 				||= 0.32
-  self.fb_comments_percent 			||= 0.1
+  self.email_share_percent 			  ||= 0.1
+  self.fb_share_percent 			    ||= 0.1
+  self.fb_like_percent 				    ||= 0.32
+  self.fb_comments_percent 			  ||= 0.1
   self.friends_invited_percent 		||= 0.1
   self.twitter_followers_percent 	||= 0.1
   self.twitter_shares_percent 		||= 0.1
-  self.pins_percent 				||= 0.02
-  self.pinterest_followers_percent  ||= 0.02
-  self.tumblr_shares_percent 	 	||= 0.02
+  self.pins_percent 				      ||= 0.02
+  self.pinterest_followers_percent||= 0.02
+  self.tumblr_shares_percent 	 	  ||= 0.02
   self.tumblr_followers_percent	 	||= 0.02
-  self.page_likes_percent		 	||= 0.0
+  self.page_likes_percent		 	    ||= 0.0
+  self.email_shares               ||= 0
+  self.fb_shares                  ||= 0
+  self.fb_likes                   ||= 0
+  self.fb_comments                ||= 0
+  self.friends_invited            ||= 0
+  self.twitter_followers          ||= 0
+  self.twitter_shares             ||= 0
+  self.pins                       ||= 0
+  self.pinterest_followers        ||= 0
+  self.tumblr_shares              ||= 0
+  self.tumblr_followers           ||= 0
+  self.page_likes                 ||= 0
+  self.tumblr_shares              ||= 0
+  self.start                      ||= Date.today
+  self.end                        ||= 2.weeks.from_now.to_date
+  self.campaign_name              ||= "Test Name"
+  self.budget                     ||= 1000
+  self.conversion_rate            ||= 0
+  self.quoted_cpa                 ||= 0
+  self.end_cpa                    ||= 0
+  self.impressions                ||= 0 
+  self.participants               ||= 0
+  self.total_actions              ||= 0
+  self.unique_visitors            ||= 0
 end
 	
 
