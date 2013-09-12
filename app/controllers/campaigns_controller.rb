@@ -176,7 +176,9 @@ class CampaignsController < ApplicationController
       f.series(:name=>'Facebook',:data=>[0,1.07])
       f.colors(['#8EC1DA','#3B5998','#663399'])  
       f.series(:name=>'Spreeify',:data=>[@campaign.cost_per_twitter_follower, @campaign.cost_per_fb_like] )   
- 
+      f.series(:xAxis=> {
+                categories: ['Twitter price comparison', 'Facebook price comparison']
+            }
   
       f.title({ :text=>"Price Comparison - Social Actions"})
 
