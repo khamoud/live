@@ -16,9 +16,6 @@
 
           <!-- page meta -->
           <span class="page-meta">Dashboard for campaign from <%= @campaign.start.to_formatted_s(:long)  %> through <%= @campaign.end.to_formatted_s(:long) %></span>
-          	<% if current_company.user_level == 9 %>
-	      		<a href="/companies/<%=@campaign.company.id%>/campaigns/<%=@campaign.id%>/edit">Edit this campaign</a>
-	      	<% end %>
         </h2>
 
 
