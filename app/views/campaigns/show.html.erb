@@ -96,25 +96,25 @@
                     <!-- Visitors, pageview, bounce rate, etc., Sparklines plugin used -->
                     <ul class="current-status">
                       <li>
-                        <span id="status1"></span> <span class="bold">Budget : <%= number_to_currency(@campaign.budget, :unit => "$") %></span>
+                        <span id="status1"></span> <span >Budget : <%= number_to_currency(@campaign.budget, :unit => "$") %></span>
                       </li>
                       <li>
-                        <span id="status2"></span> <span class="bold">Impressions : <%=@campaign.impressions %></span> 
+                        <span id="status2"></span> <span >Impressions : <%=@campaign.impressions %></span> 
                       </li>
                       <li>
-                        <span id="status3"></span> <span class="bold">Unique Visitors : <%= @campaign.unique_visitors %></span>
+                        <span id="status3"></span> <span >Unique Visitors : <%= @campaign.unique_visitors %></span>
                       </li>
                       <li>
-                        <span id="status4"></span> <span class="bold">Conversion Rate : <%=@campaign.conversion_rate %>%</span>
+                        <span id="status4"></span> <span>Conversion Rate : <%=@campaign.conversion_rate %>%</span>
                       </li>
                       <li>
-                        <span id="status5"></span> <span class="bold">Participants : <%=@campaign.participants %></span> 
+                        <span id="status5"></span> <span >Participants : <%=@campaign.participants %></span> 
                       </li>
                       <li>
-                        <span id="status6"></span> <span class="bold">Total Actions : <%=@campaign.total_actions %></span> 
+                        <span id="status6"></span> <span >Total Actions : <%=@campaign.total_actions %></span> 
                       </li>   
                       <li>
-                        <span id="status7"></span> <span class="bold">Quoted CPA : <%=number_to_currency(@campaign.quoted_cpa, :unit => "$") %></span> 
+                        <span id="status7"></span> <span>Quoted CPA : <%=number_to_currency(@campaign.quoted_cpa, :unit => "$") %></span> 
                       </li>
                       <li>
                         <span id="status6"></span> <span class="bold">End CPA : <%=number_to_currency(@campaign.end_cpa, :unit => "$") %></span>
