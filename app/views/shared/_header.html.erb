@@ -23,9 +23,6 @@
             <!-- Dropdown menu -->
             <ul class="dropdown-menu">
               <li><%= link_to "Log out", destroy_company_session_path, :method => :delete %></li>
-              <%if current_company.user_level == 9 %>
-                <li><a href="/admin">Admin</a></li>
-              <%end%>
             </ul>
           </li>
           
@@ -34,7 +31,9 @@
         <!-- Notifications -->
         <ul class="nav pull-right">
           
-
+              <%if current_company.user_level == 9 %>
+                <li><a href="/admin">Admin</a></li>
+              <%end%>
             
             <!-- Members button with number of latest members count -->
 
