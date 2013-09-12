@@ -1,6 +1,6 @@
 class Campaign < ActiveRecord::Base
   belongs_to :company
-  attr_accessible :budget, :conversion_rate, :email_share_percent, :email_shares, :end, :end_cpa, :fb_comments, :fb_comments_percent, :fb_like_percent, :fb_likes, :fb_share_percent, :fb_shares, :friends_invited, :friends_invited_percent, :impressions, :page_likes, :page_likes_percent, :participants, :pins, :pins_percent, :pinterest_followers, :pinterest_followers_percent, :quoted_cpa, :start, :total_actions, :tumblr_followers, :tumblr_followers_percent, :tumblr_shares, :tumblr_shares_percent, :twitter_followers, :twitter_followers_percent, :twitter_shares, :twitter_shares_percent, :unique_visitors, :campaign_name, :company_id
+  attr_accessible  :campaign_name, :company_id, :budget, :conversion_rate, :email_share_percent, :email_shares, :end, :end_cpa, :fb_comments, :fb_comments_percent, :fb_like_percent, :fb_likes, :fb_share_percent, :fb_shares, :friends_invited, :friends_invited_percent, :impressions, :page_likes, :page_likes_percent, :participants, :pins, :pins_percent, :pinterest_followers, :pinterest_followers_percent, :quoted_cpa, :start, :total_actions, :tumblr_followers, :tumblr_followers_percent, :tumblr_shares, :tumblr_shares_percent, :twitter_followers, :twitter_followers_percent, :twitter_shares, :twitter_shares_percent, :unique_visitors
   after_initialize :init
 
 
