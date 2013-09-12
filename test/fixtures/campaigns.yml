@@ -1,0 +1,75 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  budget: 1
+  conversion_rate: 1.5
+  end: 2013-08-20
+  end_cpa: 1.5
+  impressions: 1
+  participants: 1
+  quoted_cpa: 1.5
+  start: 2013-08-20
+  total_actions: 1
+  unique_visitors: 1
+  email_share_percent: 1.5
+  fb_share_percent: 1.5
+  fb_like_percent: 1.5
+  fb_comments_percent: 1.5
+  friends_invited_percent: 1.5
+  twitter_followers_percent: 1.5
+  twitter_shares_percent: 1.5
+  pins_percent: 1.5
+  pinterest_followers_percent: 1.5
+  tumblr_shares_percent: 1.5
+  tumblr_followers_percent: 1.5
+  page_likes_percent: 1.5
+  page_likes: 1
+  email_shares: 1
+  fb_comments: 1
+  fb_likes: 1
+  fb_shares: 1
+  friends_invited: 1
+  pins: 1
+  pinterest_followers: 1
+  tumblr_shares: 1
+  tumblr_followers: 1
+  twitter_followers: 1
+  twitter_shares: 1
+  company: 
+
+two:
+  budget: 1
+  conversion_rate: 1.5
+  end: 2013-08-20
+  end_cpa: 1.5
+  impressions: 1
+  participants: 1
+  quoted_cpa: 1.5
+  start: 2013-08-20
+  total_actions: 1
+  unique_visitors: 1
+  email_share_percent: 1.5
+  fb_share_percent: 1.5
+  fb_like_percent: 1.5
+  fb_comments_percent: 1.5
+  friends_invited_percent: 1.5
+  twitter_followers_percent: 1.5
+  twitter_shares_percent: 1.5
+  pins_percent: 1.5
+  pinterest_followers_percent: 1.5
+  tumblr_shares_percent: 1.5
+  tumblr_followers_percent: 1.5
+  page_likes_percent: 1.5
+  page_likes: 1
+  email_shares: 1
+  fb_comments: 1
+  fb_likes: 1
+  fb_shares: 1
+  friends_invited: 1
+  pins: 1
+  pinterest_followers: 1
+  tumblr_shares: 1
+  tumblr_followers: 1
+  twitter_followers: 1
+  twitter_shares: 1
+  company: 

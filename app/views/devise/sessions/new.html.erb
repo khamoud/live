@@ -1,0 +1,57 @@
+
+<!-- Form area -->
+<div class="admin-form">
+  <div class="container-fluid">
+
+    <div class="row-fluid">
+      <div class="span12">
+        <!-- Widget starts -->
+            <div class="widget wviolet">
+              <!-- Widget head -->
+              <div class="widget-head">
+                Login 
+              </div>
+
+              <div class="widget-content">
+                <div class="padd">
+                  <!-- Login form -->
+                  <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+                    <!-- Email -->
+                    <div class="control-group">
+                      <%= f.label :login %>
+                      <div class="controls">
+                        <%= f.text_field :login, :autofocus => true %>
+                      </div>
+                    </div>
+                    <!-- Password -->
+                    <div class="control-group">
+                      <%= f.label :password %>
+                      <div class="controls">
+                        <%= f.password_field :password %>
+                      </div>
+                    </div>
+                    <!-- Remember me checkbox and sign in button -->
+                    <div class="control-group">
+                      <div class="controls">
+                          <% if devise_mapping.rememberable? -%>
+    						<div><%= f.check_box :remember_me %> <%= f.label :remember_me %></div>
+  						  <% end -%>
+                        <br>
+                        <%= f.submit "Sign in" %>
+                        <button type="reset" class="btn">Reset</button>
+                      </div>
+                    </div>
+                  </form>
+                  		<% end %> 
+                </div>
+              </div>
+                <div class="widget-foot">
+                 
+                </div>
+            </div> 
+      </div>
+    </div>
+  </div> 
+</div>
+
+

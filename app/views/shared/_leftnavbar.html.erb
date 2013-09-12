@@ -1,0 +1,34 @@
+  	<!-- Sidebar -->
+    <div class="sidebar">
+        <div class="sidebar-dropdown"><a href="#">Navigation</a></div>
+
+        <div class="sidebar-inner">
+
+          <!--- Sidebar navigation -->
+          <!-- If the main navigation has sub navigation, then add the class "has_submenu" to "li" of main navigation. -->
+          <ul class="navi">
+
+            <!-- Use the class nred, ngreen, nblue, nlightblue, nviolet or norange to add background color. You need to use this in <li> tag. -->
+
+      
+
+
+            <li class="has_submenu items open">
+              <a href="#">
+                Campaigns
+              </a>
+              <ul>
+                <% if current_company.user_level != 9 %>
+                	<% @company.campaigns.all.each do |campaign| %>
+                 		<li><a href="/companies/<%=campaign.company.id%>/campaigns/<%=campaign.id%>"><%= campaign.campaign_name %></a></li>
+                 	<%end%>
+                <% else %>
+                  <% @campaigns.each do |campaign| %>
+                    <li><a href="/companies/<%=campaign.company.id%>/campaigns/<%=campaign.id%>"><%= campaign.campaign_name %></a></li>
+                  <% end %>
+                <% end %>
+              </ul>
+            </li>
+          </ul>
+        </div>
+    </div>

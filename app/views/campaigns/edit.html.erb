@@ -1,0 +1,56 @@
+	<%= render "shared/header" %>
+	<%= render "shared/leftnavbar" %>
+<div class="content">
+  	<!-- Main bar -->
+  	<div class="mainbar">
+      
+	    <!-- Page heading -->
+	    <div class="page-head">
+        	<!-- Page heading -->
+	      	<h2 class="pull-left"><%= @company.name %> 
+          	<!-- page meta -->
+          		<span class="page-meta">Dashboard for campaign from <%= @campaign.start.to_formatted_s(:long)  %> through <%= @campaign.end.to_formatted_s(:long) %></span>
+        	</h2>
+        	<div class="clearfix"></div>
+	    </div>
+	    <!-- Page heading ends -->
+	    <!-- Matter -->
+	    <div class="matter">
+	        <div class="container-fluid">
+	          <!-- Today status. jQuery Sparkline plugin used. -->
+	          <div class="row-fluid">
+	            <div class="span12">
+	            	<%= simple_form_for [@company, @campaign] do |f| %>
+	            	<%= f.input :budget %>
+	            	<%= f.input :conversion_rate %>
+	            	<%= f.input :quoted_cpa %>
+	            	<%= f.input :end_cpa %>
+	            	<%= f.input :impressions %>
+	            	<%= f.input :participants %>
+	            	<%= f.input :total_actions %>
+	            	<%= f.input :unique_visitors %>
+
+					<%= f.input :email_shares %>
+					<%= f.input :fb_shares %>
+					<%= f.input :fb_likes %>
+					<%= f.input :fb_comments %>
+					<%= f.input :friends_invited %>
+					<%= f.input :twitter_followers %>
+					<%= f.input :twitter_shares %>
+					<%= f.input :pins %>
+					<%= f.input :pinterest_followers %>
+					<%= f.input :tumblr_shares %>
+					<%= f.input :tumblr_followers %>
+					<%= f.input :page_likes %>
+					<%= f.button :submit %>
+					<% end %> 
+	            </div>
+	          </div>
+	        </div>
+		</div>
+
+    </div>
+   <!-- Mainbar ends -->	    	
+   <div class="clearfix"></div>
+</div>
+<!-- Content ends -->
