@@ -186,7 +186,7 @@ class CampaignsController < ApplicationController
 
       ## or options for column
       f.options[:chart][:defaultSeriesType] = "column"
-      f.plot_options({:column=>{:stacking=>"normal"}})
+      f.plot_options({:column=>{:stacking=>"percent"}})
     end
     #end chart
 
