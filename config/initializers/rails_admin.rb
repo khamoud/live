@@ -115,14 +115,31 @@ RailsAdmin.config do |config|
 
   #   # Section specific configuration:
 
-  #     list do
-  #       # filters [:id, :name]  # Array of field names which filters should be shown by default in the table header
-  #       # items_per_page 100    # Override default_items_per_page
-  #       # sort_by :id           # Sort column (default is primary key)
-  #       # sort_reverse true     # Sort direction (default is true for primary key, last created first)
-  #     end
+       list do
+        field :campaign_name
+        field :budget
+        field :start
+        field :end
+        field :quoted_cpa
+        field :end_cpa
+
+       end
   #     show do; end
-  #     edit do; end
+        # edit do
+        #   field :campaign_name
+        #   field :company_id
+        #   field :start do
+        #     label "Start Date"
+        #   end
+        #   field :end do
+        #     label "End Date"
+        #   end
+        #   field :quoted_cpa
+        #   field :end_cpa
+        #   field :total_actions
+        #   field :fb_likes
+        #   field :fb_shares
+        # end
   #     export do; end
   #     # also see the create, update, modal and nested sections, which override edit in specific cases (resp. when creating, updating, modifying from another model in a popup modal or modifying from another model nested form)
   #     # you can override a cross-section field configuration in any section with the same syntax `configure :field_name do ... end`
@@ -171,12 +188,18 @@ RailsAdmin.config do |config|
 
   #   # Section specific configuration:
 
-  #     list do
-  #       # filters [:id, :name]  # Array of field names which filters should be shown by default in the table header
-  #       # items_per_page 100    # Override default_items_per_page
-  #       # sort_by :id           # Sort column (default is primary key)
-  #       # sort_reverse true     # Sort direction (default is true for primary key, last created first)
-  #     end
+       list do
+        field :username do
+          label "Brand"
+        end
+        field :last_sign_in_at do
+          label "Last sign in date"
+        end
+        field :created_at
+        field :updated_at do 
+          label "Last modified"
+        end
+       end
   #     show do; end
   #     edit do; end
   #     export do; end
