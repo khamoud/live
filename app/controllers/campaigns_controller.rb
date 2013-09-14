@@ -52,7 +52,8 @@ class CampaignsController < ApplicationController
       f.series(:name=>'Spreeify Cost',:data=>[@campaign.cost_per_twitter_follower, @campaign.cost_per_twitter_share, @campaign.cost_per_fb_like, @campaign.cost_per_fb_share] )   
       f.options[:xAxis][:categories] = ['Twitter Follower', 'Twitter Share', 'Facebook Like', 'Facebook Share']
       f.options[:legend] = []
-      f.title({ :text=>"Price Comparison - Social Actions (compared to industry averages)"})
+      f.title({ :text=>"Price Comparison - Social Actions (compared to industry averages)
+                        <br> Source: Imbue Marketing"})
 
       ###  Options for Bar
       ### f.options[:chart][:defaultSeriesType] = "bar"

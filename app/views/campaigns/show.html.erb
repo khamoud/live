@@ -11,8 +11,8 @@
 			<% elsif flash[:failure] %>
 				<p><%= flash[:failure] %></p>
 			<% end %>
-        <!-- Page heading -->
-	      <h2 class="pull-left"><%= @company.username %> 
+        <!-- Page heading --> 
+	      <h2 class="pull-left">Welcome, <%= @company.username %>!
 
           <!-- page meta -->
           <span class="page-meta">Dashboard for campaign from <%= @campaign.start.to_formatted_s(:long)  %> through <%= @campaign.end.to_formatted_s(:long) %></span>
@@ -67,7 +67,9 @@
                   <div class="padd">
 
                     <!-- Bar chart (Blue color). jQuery Flot plugin used. -->
-                    <%= high_chart("my_id4", @chart)  %>
+                    <%= high_chart("my_id4", @chart) do %>
+                      <%= raw "options.tooltip.formatter = function() {return '<b>'+ this.x +'<br>'+ this.series.name +'</b>: '+ this.y ;}"  %>
+                    <%end%>
 
 
                   </div>

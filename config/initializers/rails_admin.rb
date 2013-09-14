@@ -124,7 +124,31 @@ RailsAdmin.config do |config|
         field :end_cpa
 
        end
-  #     show do; end
+        show do
+          field :campaign_name
+          field :company_id
+          field :start do
+            label "Start Date"
+          end
+          field :end do
+            label "End Date"
+          end
+          field :quoted_cpa
+          field :end_cpa
+          field :total_actions
+          field :email_shares
+          field :fb_shares
+          field :fb_likes
+          field :fb_comments
+          field :friends_invited
+          field :twitter_followers
+          field :twitter_shares
+          field :pins
+          field :pinterest_followers
+          field :tumblr_shares
+          field :tumblr_followers
+          field :page_likes
+        end
         edit do
           field :campaign_name
           field :company_id
@@ -137,8 +161,18 @@ RailsAdmin.config do |config|
           field :quoted_cpa
           field :end_cpa
           field :total_actions
-          field :fb_likes
+          field :email_shares
           field :fb_shares
+          field :fb_likes
+          field :fb_comments
+          field :friends_invited
+          field :twitter_followers
+          field :twitter_shares
+          field :pins
+          field :pinterest_followers
+          field :tumblr_shares
+          field :tumblr_followers
+          field :page_likes
         end
   #     export do; end
   #     # also see the create, update, modal and nested sections, which override edit in specific cases (resp. when creating, updating, modifying from another model in a popup modal or modifying from another model nested form)
@@ -190,7 +224,7 @@ RailsAdmin.config do |config|
 
        list do
         field :username do
-          label "Brand"
+          label "Company"
         end
         field :last_sign_in_at do
           label "Last sign in date"
