@@ -34,7 +34,7 @@ class CampaignsController < ApplicationController
                      'Pins',
                      'Pinterest Followers',
                      'Tumblr Shares']
-        f.labels(:items=>[:html=>"Total Social Actions", :style=>{:left=>"40px", :top=>"8px", :color=>"black"} ])
+       
         f.colors(['#663399'])      
         f.series(:type=> 'column',:name=> 'Spreeify',:data=> [@campaign.email_shares ,@campaign.fb_shares ,@campaign.fb_likes ,@campaign.fb_comments ,@campaign.friends_invited ,@campaign.twitter_followers ,@campaign.twitter_shares, @campaign.pins, @campaign.pinterest_followers, @campaign.tumblr_shares ])
     end

@@ -125,21 +125,21 @@ RailsAdmin.config do |config|
 
        end
   #     show do; end
-        # edit do
-        #   field :campaign_name
-        #   field :company_id
-        #   field :start do
-        #     label "Start Date"
-        #   end
-        #   field :end do
-        #     label "End Date"
-        #   end
-        #   field :quoted_cpa
-        #   field :end_cpa
-        #   field :total_actions
-        #   field :fb_likes
-        #   field :fb_shares
-        # end
+        edit do
+          field :campaign_name
+          field :company_id
+          field :start do
+            label "Start Date"
+          end
+          field :end do
+            label "End Date"
+          end
+          field :quoted_cpa
+          field :end_cpa
+          field :total_actions
+          field :fb_likes
+          field :fb_shares
+        end
   #     export do; end
   #     # also see the create, update, modal and nested sections, which override edit in specific cases (resp. when creating, updating, modifying from another model in a popup modal or modifying from another model nested form)
   #     # you can override a cross-section field configuration in any section with the same syntax `configure :field_name do ... end`
