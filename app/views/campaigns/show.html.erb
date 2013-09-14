@@ -93,34 +93,40 @@
                 <div class="widget-content">
                   <div class="padd">
 
-                    <!-- Visitors, pageview, bounce rate, etc., Sparklines plugin used -->
-                    <ul class="current-status">
-                      <li>
-                        <span id="status1"></span> <span >Budget : <%= number_to_currency(@campaign.budget, :unit => "$") %></span>
-                      </li>
-                      <li>
-                        <span id="status2"></span> <span >Impressions : <%=@campaign.impressions %></span> 
-                      </li>
-                      <li>
-                        <span id="status3"></span> <span >Unique Visitors : <%= @campaign.unique_visitors %></span>
-                      </li>
-                      <li>
-                        <span id="status4"></span> <span>Conversion Rate : <%=@campaign.conversion_rate %>%</span>
-                      </li>
-                      <li>
-                        <span id="status5"></span> <span >Participants : <%=@campaign.participants %></span> 
-                      </li>
-                      <li>
-                        <span id="status6"></span> <span >Total Actions : <%=@campaign.total_actions %></span> 
-                      </li>   
-                      <li>
-                        <span id="status7"></span> <span>Quoted CPA : <%=number_to_currency(@campaign.quoted_cpa, :unit => "$") %></span> 
-                      </li>
-                      <li>
-                        <span id="status6"></span> <span class="bold" style="font-weight: bold; size:16px;">End CPA : <%=number_to_currency(@campaign.end_cpa, :unit => "$") %></span>
-                      </li>                                                                                                             
-                    </ul>
-
+                    <table class="table table-striped">
+                      <tr>
+                        <td>Budget: </td>
+                        <td><%= number_to_currency(@campaign.budget, :unit => "$") %></td>
+                      </tr>
+                      <tr>
+                        <td>Impressions: </td>
+                        <td><%=@campaign.impressions %></td>
+                      </tr>
+                      <tr>
+                        <td>Unique Visitors</td>
+                        <td><%= @campaign.unique_visitors %></td>
+                      </tr>
+                      <tr>
+                        <td>Conversion Rate: </td>
+                        <td><%=@campaign.conversion_rate %>%</td>
+                      </tr>
+                      <tr>
+                        <td>Participants </td>
+                        <td><%=@campaign.participants %></td>
+                      </tr>
+                      <tr>
+                        <td>Total Actions: </td>
+                        <td><%=@campaign.total_actions %></td>
+                      </tr>
+                      <tr>
+                        <td>Quoted CPA: </td>
+                        <td><%=number_to_currency(@campaign.quoted_cpa, :unit => "$") %></td>
+                      </tr>
+                      <tr class="success">
+                        <td>End CPA: </td>
+                        <td><%=number_to_currency(@campaign.end_cpa, :unit => "$") %></td>
+                      </tr>
+                    </table>
                   </div>
                 </div>
 
