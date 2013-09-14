@@ -36,7 +36,7 @@ class CampaignsController < ApplicationController
                      'Tumblr Shares']
        
         f.colors(['#663399'])      
-        f.series(:type=> 'column',:name=> 'Spreeify',:data=> [@campaign.email_shares ,@campaign.fb_shares ,@campaign.fb_likes ,@campaign.fb_comments ,@campaign.friends_invited ,@campaign.twitter_followers ,@campaign.twitter_shares, @campaign.pins, @campaign.pinterest_followers, @campaign.tumblr_shares ])
+        f.series(:type=> 'column',:name=> 'Social Actions',:data=> [@campaign.email_shares ,@campaign.fb_shares ,@campaign.fb_likes ,@campaign.fb_comments ,@campaign.friends_invited ,@campaign.twitter_followers ,@campaign.twitter_shares, @campaign.pins, @campaign.pinterest_followers, @campaign.tumblr_shares ])
     end
     #social actions chart ends
 
