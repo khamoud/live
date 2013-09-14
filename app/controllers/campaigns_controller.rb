@@ -51,7 +51,7 @@ class CampaignsController < ApplicationController
       f.colors(['#8EC1DA','#8EC1DA','#3B5998','#3B5998','#663399','#663399'])  
       f.series(:name=>'Spreeify Cost',:data=>[@campaign.cost_per_twitter_follower, @campaign.cost_per_twitter_share, @campaign.cost_per_fb_like, @campaign.cost_per_fb_share] )   
       f.options[:xAxis][:categories] = ['Twitter Follower', 'Twitter Share', 'Facebook Like', 'Facebook Share']
-  
+      f.options[:legend] = []
       f.title({ :text=>"Price Comparison - Social Actions (compared to industry averages)"})
 
       ###  Options for Bar
