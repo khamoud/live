@@ -44,12 +44,12 @@ class CampaignsController < ApplicationController
     #chart comparing twitter to spreeify
     @bar_comparison = LazyHighCharts::HighChart.new('column') do |f|
             
-      f.series(:name=>'Twitter Follower',:data=> [2, 0, 0, 0])
-      f.series(:name=>'Twitter Share', :data=>[0,1.5,0,0])
-      f.series(:name=>'Facebook Like',:data=>[0, 0,1.07, 0])
-      f.series(:name=>'Facebook Share', :data=>[0,0,0,2.5])
+      f.series(:name=>'Industry Average Cost Per Twitter Follower',:data=> [2, 0, 0, 0])
+      f.series(:name=>'Industry Average Cost Per Twitter Share', :data=>[0,1.5,0,0])
+      f.series(:name=>'Industry Average Cost Per Facebook Like',:data=>[0, 0,1.07, 0])
+      f.series(:name=>'Industry Average Cost Per Facebook Share', :data=>[0,0,0,2.5])
       f.colors(['#8EC1DA','#8EC1DA','#3B5998','#3B5998','#663399','#663399'])  
-      f.series(:name=>'Spreeify',:data=>[@campaign.cost_per_twitter_follower, @campaign.cost_per_twitter_share, @campaign.cost_per_fb_like, @campaign.cost_per_fb_share] )   
+      f.series(:name=>'Spreeify Cost',:data=>[@campaign.cost_per_twitter_follower, @campaign.cost_per_twitter_share, @campaign.cost_per_fb_like, @campaign.cost_per_fb_share] )   
       f.options[:xAxis][:categories] = ['Twitter Follower', 'Twitter Share', 'Facebook Like', 'Facebook Share']
   
       f.title({ :text=>"Price Comparison - Social Actions (compared to industry averages)"})
