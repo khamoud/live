@@ -100,11 +100,11 @@
                       </tr>
                       <tr>
                         <td>Impressions: </td>
-                        <td><%=@campaign.impressions %></td>
+                        <td><%= number_with_delimiter(@campaign.impressions, :delimiter => ',') %></td>
                       </tr>
                       <tr>
                         <td>Unique Visitors</td>
-                        <td><%= @campaign.unique_visitors %></td>
+                        <td><%= number_with_delimiter(@campaign.unique_visitors, :delimiter => ',') %></td>
                       </tr>
                       <tr>
                         <td>Conversion Rate: </td>
@@ -112,11 +112,11 @@
                       </tr>
                       <tr>
                         <td>Participants </td>
-                        <td><%=@campaign.participants %></td>
+                        <td><%= number_with_delimiter(@campaign.participants, :delimiter => ',') %></td>
                       </tr>
                       <tr>
                         <td>Total Actions: </td>
-                        <td><%=@campaign.total_actions %></td>
+                        <td><%= number_with_delimiter(@campaign.total_actions, :delimiter => ',') %></td>
                       </tr>
                       <tr>
                         <td>Quoted CPA: </td>
